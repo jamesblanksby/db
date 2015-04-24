@@ -24,7 +24,12 @@ class db {
 			$index = 0;
 			foreach($where_array as $row => $value) :
 				$value = (is_string($value) ? "'" . $value . "'" : $value);
-				$sql .= "{$row} = {$value}" . ($array_count > 1 && $array_count - 1 != $index ? " AND " : " ");
+				if(strpos($value, '%') === false) :
+					$comparison = " = ";
+				else :
+					$comparison = " LIKE ";
+				endif;
+				$sql .= "{$row}" . $comparison . "{$value}" . ($array_count > 1 && $array_count - 1 != $index ? " AND " : " ");
 				$index++;
 			endforeach;
 		endif;
