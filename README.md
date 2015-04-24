@@ -14,7 +14,7 @@ db::select(object $mysqli, string $table_name
 ```
 Here is an example:
 ```php
-$user_array = db::select($mysqli, 'user', ['name' => 'John%'], ['name' => 'ASC'], '10');
+$user_array = db::select($mysqli, 'user', '*', ['name' => 'John'], ['name' => 'ASC'], '10');
 ```
 
 ## Insert Query
