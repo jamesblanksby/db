@@ -1,6 +1,7 @@
 # DB
 A simple PHP MySQLi wrapper
-------
+
+---
 
 ## Initialisation
 All functions require a MySQLi object created with `mysqli_connect` to be passed.
