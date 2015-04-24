@@ -49,7 +49,7 @@ db::update($mysqli, 'user', $data, ['id' => 45]);
 ## Delete Query
 Returns **TRUE** on success or **FALSE** on failure.
 ```php
-db::delete(object $mysqli, string $table_name, [, array $where = null]);
+db::delete(object $mysqli, string $table_name [, array $where = null]);
 ```
 
 ## Raw Query
