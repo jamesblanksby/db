@@ -7,7 +7,7 @@ A simple PHP MySQLi wrapper
 All functions require a `mysqli_connect()` object to be passed as the first function parameter.
 
 ## Select Query
-Returns `data array` on success or **FALSE** if no results are found.
+Returns a `data array` on success or **FALSE** if no results are found.
 ```php
 db::select(object $mysqli, string $table_name 
 	[, mixed $rows [, array $where = null [, array $order_by = null [, string $limit]]]]);
