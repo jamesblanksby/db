@@ -8,7 +8,8 @@ All functions require a MySQLi object created with `mysqli_connect` to be passed
 ## Select Query
 Returns data array on **TRUE** or **FALSE** if no results are found.
 ```php
-db::select(object $mysqli, string $table_name [, mixed $rows [, array $where = null [, array $order_by = null [, string $limit]]]]);
+db::select(object $mysqli, string $table_name 
+	[, mixed $rows [, array $where = null [, array $order_by = null [, string $limit]]]]);
 ```
 
 ## Insert Query
