@@ -4,7 +4,7 @@ A simple PHP MySQLi wrapper
 ---
 
 ## Initialisation
-All functions require a MySQLi object created with `mysqli_connect` to be passed.
+All functions require a MySQLi object created with `mysqli_connect()` to be passed.
 
 ## Select Query
 Returns `data array` on success or **FALSE** if no results are found.
