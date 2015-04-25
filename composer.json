@@ -1,0 +1,13 @@
+{
+    "name": "jamesblanksby/db",
+    "description": "A simple PHP MySQLi wrapper",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "James Blanksby",
+            "email": "james@blanks.by"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
