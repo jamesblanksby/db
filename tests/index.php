@@ -8,7 +8,7 @@ define('DB_PASS', '');
 define('DB_NAME', '');
 
 // MYSQL database connection
-$mysqli = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die('Error ' . mysqli_error($mysqli));
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die('Error ' . mysqli_error($mysqli));
 
 // $user_array = db::select($mysqli, 'user');
 // echo '<pre>' . print_r($user_array, 1) . '</pre>';
