@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../db.class.php');
+require_once(__DIR__ . '/../src/db/db.class.php');
 
 // Database connection details
 define('DB_HOST', '');
@@ -10,7 +10,7 @@ define('DB_NAME', '');
 // MYSQL database connection
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME) or die('Error ' . mysqli_error($mysqli));
 
-// $user_array = db::select($mysqli, 'user');
+$user_array = db::select($mysqli, 'user');
 // echo '<pre>' . print_r($user_array, 1) . '</pre>';
 
 // $data = [
