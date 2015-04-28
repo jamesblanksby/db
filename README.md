@@ -9,27 +9,29 @@ Installation
 
 1. Download and install Composer
 
-```
-$ curl -sS https://getcomposer.org/installer | php
-```
+	```sh
+	$ curl -sS https://getcomposer.org/installer | php
+	```
 
 2. Create a composer.json file to define the dependency.
 
-```
-{
-    "require": {
-        "jamesblanksby/db": "dev-master"
-    }
-}
-```
+	```json
+	{
+	    "require": {
+	        "jamesblanksby/db": "dev-master"
+	    }
+	}
+	```
 
 3. Run Composer in your development directory
 
-```
-$ cd ~/DEV_DIR; composer install
-```
+	```sh
+	$ cd ~/DEV_DIR; composer install
+	```
 
-## Initialisation
+Initialisation
+--------------
+
 All functions require a `mysqli` object to be passed as the first function parameter.
 
 ```php
