@@ -6,6 +6,10 @@ A simple PHP MySQLi wrapper
 ## Initialisation
 All functions require a `mysqli` object to be passed as the first function parameter.
 
+```php
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+```
+
 ## Select Query
 Returns a `data array` on success or **FALSE** if no results are found.
 ```php
@@ -50,6 +54,11 @@ db::update($mysqli, 'user', $data, ['id' => 45]);
 Returns **TRUE** on success or **FALSE** on failure.
 ```php
 db::delete(object $mysqli, string $table_name [, array $where = null]);
+```
+
+Delete query example:
+```php
+db::delete($mysqli, 'user', ['id' => '43']);
 ```
 
 ## Raw Query
