@@ -1,14 +1,20 @@
-# DB
+DB
+==
 A simple PHP MySQLi wrapper
 
 ---
 
-## Installation
+Installation
+------------
+
 1. Download and install Composer
+
 ```
 $ curl -sS https://getcomposer.org/installer | php
 ```
+
 2. Create a composer.json file to define the dependency.
+
 ```
 {
     "require": {
@@ -16,7 +22,9 @@ $ curl -sS https://getcomposer.org/installer | php
     }
 }
 ```
+
 3. Run Composer in your development directory
+
 ```
 $ cd ~/DEV_DIR; composer install
 ```
@@ -28,7 +36,9 @@ All functions require a `mysqli` object to be passed as the first function param
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 ```
 
-## Select Query
+Select Query
+------------
+
 Returns a `data array` on success or **FALSE** if no results are found.
 ```php
 db::select(object $mysqli, string $table_name 
@@ -39,7 +49,9 @@ Here is an example:
 $user_array = db::select($mysqli, 'user', '*', ['name' => 'John'], ['name' => 'ASC'], '10');
 ```
 
-## Insert Query
+Insert Query
+------------
+
 Returns **TRUE** on success or **FALSE** on failure.
 ```php
 db::insert(object $mysqli, string $table_name, array $data);
@@ -55,7 +67,9 @@ $data = [
 db::insert($mysqli, 'user', $data);
 ```
 
-## Update Query
+Update Query
+------------
+
 Returns **TRUE** on success or **FALSE** on failure.
 ```php
 db::update(object $mysqli, string $table_name, array $data [, array $where = null]);
@@ -68,7 +82,9 @@ $data = [
 db::update($mysqli, 'user', $data, ['id' => 45]);
 ```
 
-## Delete Query
+Delete Query
+------------
+
 Returns **TRUE** on success or **FALSE** on failure.
 ```php
 db::delete(object $mysqli, string $table_name [, array $where = null]);
@@ -78,8 +94,9 @@ Delete query example:
 ```php
 db::delete($mysqli, 'user', ['id' => '43']);
 ```
+Raw Query
+---------
 
-## Raw Query
 Returns **TRUE** on success or **FALSE** on failure.
 ```php
 db::raw(object $mysqli, string $sql [, array $data_type]);
