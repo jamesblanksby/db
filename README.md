@@ -1,8 +1,7 @@
 DB
 ==
-A simple PHP MySQLi wrapper
 
----
+A simple PHP MySQLi wrapper
 
 Installation
 ------------
@@ -96,6 +95,7 @@ Delete query example:
 ```php
 db::delete($mysqli, 'user', ['id' => '43']);
 ```
+
 Raw Query
 ---------
 
