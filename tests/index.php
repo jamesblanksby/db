@@ -22,11 +22,11 @@ $user_array = db::select($mysqli, 'user');
 // db::insert($mysqli, 'user', $data);
 
 // $data = [
-// 	'name_first' => ['s', 'James']
+// 	'password' => ['s', 'bUc0It8bOf']
 // ];
-// db::update($mysqli, 'user', $data, ['id' => 106]);
+// db::update($mysqli, 'user', $data, ['id' => 45]);
 
-// db::delete($mysqli, 'user', ['id' => 110]);
+// db::delete($mysqli, 'user', ['id' => 45]);
 
 // $result = db::raw($mysqli, 'SELECT * FROM user');
 // while($user = $result->fetch_object()) :
