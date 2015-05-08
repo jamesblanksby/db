@@ -110,7 +110,7 @@ class db {
 
 			$stmt->execute();
 
-			return $stmt;
+			return ($stmt ? true : false);
 		endif;
 		return false;
 	}
@@ -162,7 +162,7 @@ class db {
 
 			$stmt->execute();
 
-			return $stmt;
+			return ($stmt ? true : false);
 		endif;
 		return false;
 	}
@@ -212,7 +212,7 @@ class db {
 
 			$stmt->execute();
 
-			return $stmt;
+			return ($stmt ? true : false);
 		else :
 			$result = $db->query($sql);
 			if($result === false) :
