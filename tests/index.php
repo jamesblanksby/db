@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '/../src/db/db.class.php');
+require_once(__DIR__ . '/../db.class.php');
 
 // Database connection details
 define('DB_HOST', '');
